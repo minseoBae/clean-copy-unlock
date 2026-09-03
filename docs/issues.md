@@ -31,7 +31,7 @@
 - **현상:** 스토어 정책상 요구되는 개인정보처리방침 페이지가 아직 없음.
 - **근거:** Absolute Enable Right Click & Copy가 정확히 이 사유로 제거됨.
 - **해결:** `PRIVACY_POLICY.md`(한/영 병기) 작성 완료 — 수집 데이터 없음, `storage` 권한 용도, 제3자 공유 없음 명시.
-- **남은 문제:** 저장소가 private라 이 문서를 가리킬 공개 URL이 없음. 스토어 등록 전에 호스팅 방법 결정 필요(예: 이 문서만 공개 GitHub Pages/Gist로 올리기, 또는 저장소를 public으로 전환).
+- **호스팅 완료:** 저장소를 Public으로 전환하고 GitHub Pages 활성화(source: main, `/`). 공개 URL: https://minseobae.github.io/clean-copy-unlock/privacy-policy.html
 
 ## 아키텍처 결정: 제로 오버레이, 제로 DOM 조작
 - **문제:** 기존 앱들은 오버레이 div, `cloneNode`로 DOM을 조작해 React/Vue SPA의 가상 DOM 재조정과 충돌.
