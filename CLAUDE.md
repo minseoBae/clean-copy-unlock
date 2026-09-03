@@ -5,4 +5,11 @@
 - 진행 상황(완료된 구현, 로드맵 갱신)은 `docs/progress.md`에 즉시 반영할 것.
 - 발생한 에러, 트러블슈팅 과정, 미해결 이슈는 `docs/issues.md`에 즉시 반영할 것.
 - 두 문서는 옵시디언 위키링크(`[[progress]]`, `[[issues]]`)로 상호 참조하며, 새 항목 추가 시 관련 항목에 링크를 건다.
-- 문서 갱신도 Token Saving 원칙을 따른다: 전체 파일을 다시 쓰지 말고 관련 섹션만 최소 수정(Edit)한다.  
+- 문서 갱신도 Token Saving 원칙을 따른다: 전체 파일을 다시 쓰지 말고 관련 섹션만 최소 수정(Edit)한다.
+
+[SESSION LOG (중앙 옵시디언 볼트, 2026-09-04 추가)]
+이 프로젝트와 무관하게, 모든 프로젝트의 Claude Code 작업 세션은 `C:\workspace\ClaudeMemory`(별도 옵시디언 볼트)에도 기록한다.
+- 작업 세션이 끝나면(또는 사용자가 "세션 기록해줘"라고 요청하면) `ClaudeMemory\sessions\YYYY-MM\YYYY-MM-DD-HHMM-clean-copy-unlock.md`에 새 파일을 만든다 (템플릿: `ClaudeMemory\_templates\session-template.md`).
+- `ClaudeMemory\projects\clean-copy-unlock.md` 허브 노트는 건드릴 필요 없음(Dataview가 자동 집계).
+- 다른 프로젝트에도 재사용할 만한 결정/에러 해결법은 `ClaudeMemory\notes\decisions|errors\`로 승격.
+- 이 파일(`docs/progress.md`, `docs/issues.md`)은 프로젝트 자체의 "현재 상태" 문서로 계속 유지 — 세션 로그와 역할이 다르므로 대체하지 않는다.  
