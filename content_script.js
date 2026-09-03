@@ -30,7 +30,9 @@
 
   // 일부 사이트는 우클릭/copy 이벤트 대신 Ctrl(Cmd)+C 등 단축키를
   // keydown 단계에서 미리 preventDefault 하므로 별도 방어가 필요하다.
-  const GUARDED_KEYS = new Set(['c', 'a', 'x', 'u', 's', 'p']);
+  // 'u'(보기 소스)/'s'(저장)/'p'(인쇄)는 Google Docs·Notion·코드 에디터 등
+  // 사이트 자체 단축키와 충돌해 기능을 파괴하므로 제외한다.
+  const GUARDED_KEYS = new Set(['c', 'a', 'x']);
 
   function unlockKeydown(event) {
     if (!enabled) return;
