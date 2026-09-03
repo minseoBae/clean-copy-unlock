@@ -32,7 +32,7 @@
 - Notion 등 대상 사이트에서 충돌 없이 정상 동작 확인 (사용자 실사용 테스트).
 
 ## 로드맵 / 다음 단계 (우선순위 순)
-1. **[P0]** 개인정보처리방침 페이지 작성·게시 — 경쟁사("Absolute Enable Right Click & Copy") 스토어 제거의 직접 원인이었던 항목. 아직 미작성.
+1. ~~개인정보처리방침 페이지 작성~~ — 완료 (2026-09-04, `PRIVACY_POLICY.md`, `docs/privacy-policy` 브랜치). **호스팅 URL 확정은 아직 남음** — 스토어 등록 시 접근 가능한 공개 URL이 필요(비공개 저장소라 raw GitHub 링크 사용 불가). 방법 결정 필요.
 2. **[P0]** `GUARDED_KEYS`에서 `'u','s','p'` 제외, `'c','a','x'`만 유지하는 방향 검토 중 — 사용자 승인 대기, 코드 미수정.
 3. **[P1]** 추가 실사용 테스트: YouTube/Bilibili 동영상 컨트롤, Google Docs/Sheets/Overleaf 단축키, ChatGPT, Instagram, Spotify.
 4. **[백로그]** 다국어(i18n) 지원.
