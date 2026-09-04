@@ -11,6 +11,7 @@
 ### `manifest.json`
 - `manifest_version: 3`
 - `permissions: ["storage"]`
+- `icons` / `action.default_icon`: `icons/icon{16,48,128}.png` (2026-09-04 추가 — 이전엔 아이콘이 없어서 기본 퍼즐 아이콘으로 표시됐음)
 - `background.service_worker: background.js`
 - `action.default_popup: popup.html`
 - `content_scripts`: `<all_urls>`, `content_script.js`, `run_at: document_start`, `all_frames: true`
