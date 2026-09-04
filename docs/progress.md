@@ -22,8 +22,8 @@
 2. **이벤트 차단 해제 (`BLOCKED_EVENTS`)**
    - `contextmenu`, `selectstart`, `copy`, `cut`, `dragstart`를 캡처링 단계에서 가로채 `stopImmediatePropagation()` 호출.
 3. **단축키 차단 해제 (`GUARDED_KEYS`)**
-   - 현재 `Set(['c','a','x','u','s','p'])` — Ctrl/Cmd + 해당 키 조합의 `keydown`을 캡처링 단계에서 무력화.
-   - ⚠️ `'s'`(Ctrl+S) 관련 알려진 충돌 위험 있음 — 상세는 [[issues#GUARDED_KEYS 's' 충돌]].
+   - 현재 `Set(['c','a','x'])` — Ctrl/Cmd + 해당 키 조합의 `keydown`을 캡처링 단계에서 무력화.
+   - `'u','s','p'`는 Google Docs/Notion/코드 에디터 등 사이트 자체 저장·인쇄·소스보기 단축키와 충돌해 제외함 (2026-09-04 수정). 상세는 [[issues#GUARDED_KEYS 's' 충돌 — 해결됨]].
 
 ### `background.js` / `popup.html` / `popup.js`
 - 툴바 뱃지 ON/OFF 동기화(`background.js`) 및 전역 토글 UI(`popup.*`) — storage의 `enabled` 값을 읽고 쓴다.
@@ -33,11 +33,12 @@
 
 ## 로드맵 / 다음 단계 (우선순위 순)
 1. ~~개인정보처리방침 페이지 작성·게시~~ — 완료 (2026-09-04). 저장소를 Public으로 전환 + GitHub Pages 활성화. 공개 URL: https://minseobae.github.io/clean-copy-unlock/privacy-policy.html — 크롬 웹스토어 등록 시 이 URL 사용.
-2. **[P0]** `GUARDED_KEYS`에서 `'u','s','p'` 제외, `'c','a','x'`만 유지하는 방향 검토 중 — 사용자 승인 대기, 코드 미수정.
-3. **[P1]** 추가 실사용 테스트: YouTube/Bilibili 동영상 컨트롤, Google Docs/Sheets/Overleaf 단축키, ChatGPT, Instagram, Spotify.
+2. ~~`GUARDED_KEYS`에서 `'u','s','p'` 제외~~ — 완료 (2026-09-04, `fix/guarded-keys-conflict` 브랜치). 로컬 테스트 페이지로 동작 검증 완료, `main` 병합 대기.
+3. **[P1]** 추가 실사용 테스트: YouTube/Bilibili 동영상 컨트롤, Google Docs/Sheets/Overleaf 단축키, ChatGPT, Instagram, Spotify. (`'u','s','p'` 제외 후 재검증 필요)
 4. **[백로그]** 다국어(i18n) 지원.
 5. **[백로그]** "강도 모드"(Standard/Strong) 옵션.
 
 ## 변경 이력
+- 2026-09-04: `GUARDED_KEYS`에서 `'u','s','p'` 제외 (`'c','a','x'`만 유지) — `fix/guarded-keys-conflict` 브랜치.
 - 2026-09-04: `docs/` 옵시디언 연동 문서화 시스템 최초 세팅.
 - 2026-09-03: v0.2.0 — storage 연동 `enabled` 플래그, 캡처링 단계 이벤트 차단 해제 방식 확정.
