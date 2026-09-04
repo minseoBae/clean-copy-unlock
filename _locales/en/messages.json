@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "Clean Copy Unlock",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Unblocks right-click and copy restrictions without conflicts on dynamic sites like React/Vue apps and Notion.",
+    "description": "Description shown in the Chrome Web Store"
+  },
+  "popupToggleLabel": {
+    "message": "Unblock right-click / copy",
+    "description": "Label next to the ON/OFF toggle in the popup"
+  },
+  "statusChecking": {
+    "message": "Checking status...",
+    "description": "Initial status text shown before storage lookup finishes"
+  },
+  "statusOn": {
+    "message": "Currently ON (right-click/copy allowed)",
+    "description": "Status text when the toggle is ON"
+  },
+  "statusOff": {
+    "message": "Currently OFF (site's default behavior applies)",
+    "description": "Status text when the toggle is OFF"
+  }
+}

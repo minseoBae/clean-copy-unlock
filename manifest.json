@@ -1,15 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Clean Copy Unlock",
+  "name": "__MSG_extName__",
   "version": "0.2.0",
-  "description": "React/Vue/Notion 등 동적 웹사이트와 충돌 없이 우클릭 및 복사 제한을 해제합니다.",
+  "default_locale": "ko",
+  "description": "__MSG_extDescription__",
   "permissions": ["storage"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Clean Copy Unlock"
+    "default_title": "__MSG_extName__"
   },
   "content_scripts": [
     {
