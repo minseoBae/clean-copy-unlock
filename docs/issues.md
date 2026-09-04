@@ -28,10 +28,11 @@
 - **검증 완료 (2026-09-04):** 사이트의 차단/가로채기 로직을 흉내 낸 로컬 테스트 페이지로 확인. 우클릭/선택/복사/잘라내기/드래그 차단 해제는 그대로 동작, Ctrl+C/A/X는 여전히 강제 해제, Ctrl+U/S/P는 사이트 자체 핸들러가 정상 실행됨(더 이상 가로채지 않음). 콘솔 에러 없음.
 - **상태:** `fix/guarded-keys-conflict` 브랜치, `main` 병합 대기 (실사용 사이트 로그인 기반 테스트는 아직 — Google Docs/Notion 실제 계정에서 육안 확인은 선택 사항).
 
-### 개인정보처리방침 부재 (미해결, P0)
+### 개인정보처리방침 부재 — 문서 작성은 해결, 호스팅은 미해결
 - **현상:** 스토어 정책상 요구되는 개인정보처리방침 페이지가 아직 없음.
 - **근거:** Absolute Enable Right Click & Copy가 정확히 이 사유로 제거됨.
-- **상태:** 미작성.
+- **해결:** `PRIVACY_POLICY.md`(한/영 병기) 작성 완료 — 수집 데이터 없음, `storage` 권한 용도, 제3자 공유 없음 명시.
+- **호스팅 완료:** 저장소를 Public으로 전환하고 GitHub Pages 활성화(source: main, `/`). 공개 URL: https://minseobae.github.io/clean-copy-unlock/privacy-policy.html
 
 ## 아키텍처 결정: 제로 오버레이, 제로 DOM 조작
 - **문제:** 기존 앱들은 오버레이 div, `cloneNode`로 DOM을 조작해 React/Vue SPA의 가상 DOM 재조정과 충돌.

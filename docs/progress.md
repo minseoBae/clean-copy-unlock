@@ -32,8 +32,8 @@
 - Notion 등 대상 사이트에서 충돌 없이 정상 동작 확인 (사용자 실사용 테스트).
 
 ## 로드맵 / 다음 단계 (우선순위 순)
-1. **[P0]** 개인정보처리방침 페이지 작성·게시 — 경쟁사("Absolute Enable Right Click & Copy") 스토어 제거의 직접 원인이었던 항목. 아직 미작성.
-2. ~~`GUARDED_KEYS`에서 `'u','s','p'` 제외~~ — 완료 (2026-09-04, `fix/guarded-keys-conflict` 브랜치).
+1. ~~개인정보처리방침 페이지 작성·게시~~ — 완료 (2026-09-04). 저장소를 Public으로 전환 + GitHub Pages 활성화. 공개 URL: https://minseobae.github.io/clean-copy-unlock/privacy-policy.html — 크롬 웹스토어 등록 시 이 URL 사용.
+2. ~~`GUARDED_KEYS`에서 `'u','s','p'` 제외~~ — 완료 (2026-09-04, `fix/guarded-keys-conflict` 브랜치). 로컬 테스트 페이지로 동작 검증 완료, `main` 병합 대기.
 3. **[P1]** 추가 실사용 테스트: YouTube/Bilibili 동영상 컨트롤, Google Docs/Sheets/Overleaf 단축키, ChatGPT, Instagram, Spotify. (`'u','s','p'` 제외 후 재검증 필요)
 4. **[백로그]** 다국어(i18n) 지원.
 5. **[백로그]** "강도 모드"(Standard/Strong) 옵션.
