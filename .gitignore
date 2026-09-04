@@ -11,3 +11,6 @@ Thumbs.db
 # Editor
 .vscode/
 *.log
+
+# Build artifacts (release packages, not source)
+*.zip
