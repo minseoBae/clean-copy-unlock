@@ -24,15 +24,15 @@
     "description": "Status text when the toggle is OFF"
   },
   "popupModeLabel": {
-    "message": "Strength mode (Strong)",
-    "description": "Label for the Standard/Strong strength mode toggle"
+    "message": "Also unblock save/print shortcuts",
+    "description": "Label for the Standard/Strong strength mode toggle — describes the behavior directly"
   },
   "modeHintStandard": {
-    "message": "Standard: only unblocks copy/paste",
+    "message": "Standard: only unblocks copy/paste (recommended)",
     "description": "Hint text shown in Standard mode"
   },
   "modeHintStrong": {
-    "message": "Strong: also unblocks save/print/view-source (may conflict with a site's own shortcuts)",
+    "message": "⚠️ Also unblocks Ctrl+S/P/U — may conflict with site features",
     "description": "Hint text shown in Strong mode"
   }
 }
