@@ -35,7 +35,7 @@
 1. ~~개인정보처리방침 페이지 작성·게시~~ — 완료 (2026-09-04). 저장소를 Public으로 전환 + GitHub Pages 활성화. 공개 URL: https://minseobae.github.io/clean-copy-unlock/privacy-policy.html — 크롬 웹스토어 등록 시 이 URL 사용.
 2. ~~`GUARDED_KEYS`에서 `'u','s','p'` 제외~~ — 완료 (2026-09-04, `fix/guarded-keys-conflict` 브랜치). 로컬 테스트 페이지로 동작 검증 완료, `main` 병합 대기.
 3. **[P1]** 추가 실사용 테스트 — 일부 완료 (2026-09-04): YouTube/Google Docs/ChatGPT 정상 확인. Bilibili(지역 제한 추정)/Overleaf(로그인 필요)/Instagram(계정 보안 확인 화면)/Spotify(시간 관계상)는 미확인, 상세는 [[issues#엣지-케이스-점검-2026-09-04-claude-in-chrome로-실사용-테스트]] 참고.
-4. **[백로그]** 다국어(i18n) 지원.
+4. ~~다국어(i18n) 지원~~ — 완료 (2026-09-04). `_locales/ko`, `_locales/en` 추가, `manifest.json`(name/description) + `popup.html`/`popup.js`(토글 라벨, 상태 텍스트)를 `chrome.i18n`으로 전환. 브라우저 UI 언어가 한국어가 아니면 자동으로 영어로 표시됨(`default_locale: ko`).
 5. **[백로그]** "강도 모드"(Standard/Strong) 옵션.
 
 ## 변경 이력

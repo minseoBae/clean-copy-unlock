@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "Clean Copy Unlock",
+    "description": "확장 프로그램 이름"
+  },
+  "extDescription": {
+    "message": "React/Vue/Notion 등 동적 웹사이트와 충돌 없이 우클릭 및 복사 제한을 해제합니다.",
+    "description": "크롬 웹스토어에 표시되는 확장 프로그램 설명"
+  },
+  "popupToggleLabel": {
+    "message": "우클릭/복사 해제",
+    "description": "팝업의 ON/OFF 토글 옆 라벨"
+  },
+  "statusChecking": {
+    "message": "상태 확인 중...",
+    "description": "storage 조회가 끝나기 전 표시되는 초기 상태 텍스트"
+  },
+  "statusOn": {
+    "message": "현재 켜짐 (우클릭/복사 가능)",
+    "description": "토글이 ON일 때 상태 텍스트"
+  },
+  "statusOff": {
+    "message": "현재 꺼짐 (사이트 기본 정책 적용)",
+    "description": "토글이 OFF일 때 상태 텍스트"
+  }
+}
