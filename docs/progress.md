@@ -21,9 +21,10 @@
    - `chrome.storage.onChanged` 리스너로 팝업 토글과 실시간 동기화.
 2. **이벤트 차단 해제 (`BLOCKED_EVENTS`)**
    - `contextmenu`, `selectstart`, `copy`, `cut`, `dragstart`를 캡처링 단계에서 가로채 `stopImmediatePropagation()` 호출.
-3. **단축키 차단 해제 (`GUARDED_KEYS`)**
-   - 현재 `Set(['c','a','x'])` — Ctrl/Cmd + 해당 키 조합의 `keydown`을 캡처링 단계에서 무력화.
-   - `'u','s','p'`는 Google Docs/Notion/코드 에디터 등 사이트 자체 저장·인쇄·소스보기 단축키와 충돌해 제외함 (2026-09-04 수정). 상세는 [[issues#GUARDED_KEYS 's' 충돌 — 해결됨]].
+3. **단축키 차단 해제 (Standard/Strong 모드)**
+   - `storage.mode`(`'standard'`|`'strong'`, 기본값 `standard`)에 따라 `keydown` 캡처링 단계에서 무력화할 키 집합이 달라짐.
+   - `STANDARD_KEYS = Set(['c','a','x'])` — 클립보드 관련 키만. `'u','s','p'`는 Google Docs/Notion/코드 에디터 등 사이트 자체 저장·인쇄·소스보기 단축키와 충돌해 제외 (2026-09-04 수정, 상세는 [[issues#GUARDED_KEYS 's' 충돌 — 해결됨]]).
+   - `STRONG_KEYS = Set(['c','a','x','u','s','p'])` — 사용자가 팝업에서 명시적으로 켰을 때만 적용, 충돌 위험을 감수하는 옵션.
 
 ### `background.js` / `popup.html` / `popup.js`
 - 툴바 뱃지 ON/OFF 동기화(`background.js`) 및 전역 토글 UI(`popup.*`) — storage의 `enabled` 값을 읽고 쓴다.
@@ -36,7 +37,7 @@
 2. ~~`GUARDED_KEYS`에서 `'u','s','p'` 제외~~ — 완료 (2026-09-04, `fix/guarded-keys-conflict` 브랜치). 로컬 테스트 페이지로 동작 검증 완료, `main` 병합 대기.
 3. **[P1]** 추가 실사용 테스트 — 일부 완료 (2026-09-04): YouTube/Google Docs/ChatGPT 정상 확인. Bilibili(지역 제한 추정)/Overleaf(로그인 필요)/Instagram(계정 보안 확인 화면)/Spotify(시간 관계상)는 미확인, 상세는 [[issues#엣지-케이스-점검-2026-09-04-claude-in-chrome로-실사용-테스트]] 참고.
 4. ~~다국어(i18n) 지원~~ — 완료 (2026-09-04). `_locales/ko`, `_locales/en` 추가, `manifest.json`(name/description) + `popup.html`/`popup.js`(토글 라벨, 상태 텍스트)를 `chrome.i18n`으로 전환. 브라우저 UI 언어가 한국어가 아니면 자동으로 영어로 표시됨(`default_locale: ko`).
-5. **[백로그]** "강도 모드"(Standard/Strong) 옵션.
+5. ~~"강도 모드"(Standard/Strong) 옵션~~ — 완료 (2026-09-04). `storage.mode` (`'standard'`|`'strong'`, 기본값 `standard`) 추가. Standard는 `c/a/x`만, Strong은 `c/a/x/u/s/p` 전부 강제 해제. 팝업에 토글 추가, i18n(ko/en) 반영. 로컬 테스트 페이지로 두 모드 모두 검증 완료.
 
 ## 변경 이력
 - 2026-09-04: `GUARDED_KEYS`에서 `'u','s','p'` 제외 (`'c','a','x'`만 유지) — `fix/guarded-keys-conflict` 브랜치.

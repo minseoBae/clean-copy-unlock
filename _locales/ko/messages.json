@@ -22,5 +22,17 @@
   "statusOff": {
     "message": "현재 꺼짐 (사이트 기본 정책 적용)",
     "description": "토글이 OFF일 때 상태 텍스트"
+  },
+  "popupModeLabel": {
+    "message": "저장/인쇄 단축키도 해제",
+    "description": "Standard/Strong 강도 모드 토글 라벨 — 동작을 그대로 설명"
+  },
+  "modeHintStandard": {
+    "message": "기본: 복사/붙여넣기만 해제 (권장)",
+    "description": "Standard 모드일 때 설명 문구"
+  },
+  "modeHintStrong": {
+    "message": "⚠️ Ctrl+S/P/U까지 해제 — 사이트 기능과 충돌 가능",
+    "description": "Strong 모드일 때 설명 문구"
   }
 }

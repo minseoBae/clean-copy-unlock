@@ -22,5 +22,17 @@
   "statusOff": {
     "message": "Currently OFF (site's default behavior applies)",
     "description": "Status text when the toggle is OFF"
+  },
+  "popupModeLabel": {
+    "message": "Also unblock save/print shortcuts",
+    "description": "Label for the Standard/Strong strength mode toggle — describes the behavior directly"
+  },
+  "modeHintStandard": {
+    "message": "Standard: only unblocks copy/paste (recommended)",
+    "description": "Hint text shown in Standard mode"
+  },
+  "modeHintStrong": {
+    "message": "⚠️ Also unblocks Ctrl+S/P/U — may conflict with site features",
+    "description": "Hint text shown in Strong mode"
   }
 }
