@@ -22,5 +22,17 @@
   "statusOff": {
     "message": "Currently OFF (site's default behavior applies)",
     "description": "Status text when the toggle is OFF"
+  },
+  "popupModeLabel": {
+    "message": "Strength mode (Strong)",
+    "description": "Label for the Standard/Strong strength mode toggle"
+  },
+  "modeHintStandard": {
+    "message": "Standard: only unblocks copy/paste",
+    "description": "Hint text shown in Standard mode"
+  },
+  "modeHintStrong": {
+    "message": "Strong: also unblocks save/print/view-source (may conflict with a site's own shortcuts)",
+    "description": "Hint text shown in Strong mode"
   }
 }
